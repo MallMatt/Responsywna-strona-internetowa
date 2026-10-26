@@ -1,0 +1,325 @@
+<!doctype html> <!-- informacja o użyciu standardu HTML5 -->
+<html lang="pl"> <!-- początek dokumentu, język polski -->
+
+<head> <!-- sekcja ustawień strony -->
+  <meta charset="utf-8"> <!-- obsługa polskich znaków -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- dostosowanie do urządzeń mobilnych -->
+  <title>Akwarystyka - projekt</title> <!-- tytuł wyświetlany na karcie przeglądarki -->
+  <link rel="stylesheet" href="bootstrap/bootstrap_css.css"> <!-- dołączenie stylów Bootstrap -->
+  <link rel="stylesheet" href="css/style.css"> <!-- dołączenie własnego arkusza stylów -->
+</head>
+
+<body> <!-- początek widocznej części strony -->
+
+<!-- zLab1: poprawna struktura HTML5 z naglowkiem, menu, trescia i stopka. -->
+
+  <header class="site-top"> <!-- nagłówek strony -->
+    <nav class="navbar navbar-expand-lg"> <!-- menu nawigacyjne Bootstrap -->
+      <div class="container"> <!-- kontener ograniczający szerokość strony -->
+
+        <a class="navbar-brand" href="index.html">
+          <img class="icon-sm" src="ikony/clown-fish.png" alt=""> <!-- wyświetlenie logo strony -->
+          AkwaStart
+        </a> <!-- kliknięcie przenosi na stronę główną -->
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          ☰
+        </button> <!-- przycisk rozwijający menu na mniejszych ekranach -->
+
+        <div class="collapse navbar-collapse" id="mainNav"> <!-- rozwijana część menu -->
+          <ul class="navbar-nav"> <!-- lista elementów menu -->
+
+            <li><a class="nav-link active" href="index.html">Start</a></li> <!-- link do strony głównej -->
+            <li><a class="nav-link" href="ryby.html">Ryby</a></li> <!-- link do podstrony Ryby -->
+            <li><a class="nav-link" href="rosliny.html">Rosliny</a></li> <!-- link do podstrony Rośliny -->
+            <li><a class="nav-link" href="sprzet.html">Sprzet</a></li> <!-- link do podstrony Sprzęt -->
+            <li><a class="nav-link" href="formularz.html">Formularz</a></li> <!-- link do formularza -->
+            <li><a class="nav-link" href="pomoc.html">Pomoc akwaryscie</a></li> <!-- link do strony pomocy -->
+
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
+  <main> <!-- główna zawartość strony -->
+
+     <!-- zLab10: szablon strony korzysta z klas Bootstrap: container, row, col, card, carousel. -->
+
+    <section class="hero py-5"> <!-- sekcja powitalna -->
+      <div class="container"> <!-- kontener Bootstrap -->
+        <div class="row align-items-center g-4"> <!-- podział sekcji na dwa bloki -->
+
+          <div class="col-md-6"> <!-- lewa kolumna -->
+            <div class="hero-card p-4"> <!-- karta z tekstem powitalnym -->
+
+              <p>Witamy w naszym sklepie akwarystycznym online! Oferujemy wysokiej jakości akcesoria, pokarmy, rośliny i wyposażenie dla akwariów słodkowodnych oraz morskich. Dzięki starannie wyselekcjonowanemu asortymentowi i fachowemu wsparciu pomożemy Ci stworzyć zdrowe i piękne środowisko dla Twoich podopiecznych. Zakupy wygodnie, szybko i z pasją do akwarystyki!</p>
+              <!-- tekst powitalny dla odwiedzających sklep -->
+
+              <p class="mb-0">
+                <strong>Dzisiaj:</strong>
+                <span id="todayDate">...</span> <!-- miejsce, w którym JavaScript wyświetli aktualną datę -->
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-md-6"> <!-- prawa kolumna -->
+            <div id="homeCarousel" class="carousel" data-bs-ride="carousel">
+            <!-- karuzela Bootstrap ze zdjęciami -->
+
+              <div class="carousel-inner"> <!-- kontener wszystkich slajdów -->
+
+                <div class="carousel-item active">
+                  <img src="zdjęcia/zdjęcie1.jpg" alt="Akwarium z rybami"> <!-- wyświetlenie pierwszego zdjęcia -->
+                </div> <!-- pierwszy aktywny slajd -->
+
+                <div class="carousel-item">
+                  <img src="zdjęcia/zdjęcie2.jpg" alt="Ryby akwariowe"> <!-- wyświetlenie drugiego zdjęcia -->
+                </div> <!-- drugi slajd -->
+
+                <div class="carousel-item">
+                  <img src="zdjęcia/zdjęcie3.jpg" alt="Rosliny akwariowe"> <!-- wyświetlenie trzeciego zdjęcia -->
+                </div> <!-- trzeci slajd -->
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-slide="prev">
+                ‹
+              </button> <!-- przycisk przejścia do poprzedniego zdjęcia -->
+
+              <button class="carousel-control-next" type="button" data-bs-slide="next">
+                ›
+              </button> <!-- przycisk przejścia do następnego zdjęcia -->
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- zLab1: tabela porzadkuje kroki zakladania akwarium w wierszach i kolumnach. -->
+
+    <section class="container py-4"> <!-- sekcja prezentująca główne kategorie sklepu -->
+
+      <h2 class="section-title">Co u nas znajdziesz?</h2> <!-- nagłówek sekcji -->
+
+      <div class="row g-3 mt-2"> <!-- układ trzech kolumn Bootstrap -->
+
+        <div class="col-md-4"> <!-- pierwsza kolumna -->
+          <div class="card"> <!-- karta Bootstrap grupująca zawartość -->
+            <div class="card-body"> <!-- główna zawartość karty -->
+
+              <h3 class="card-title">
+                <img class="icon-sm" src="ikony/clown-fish.png" alt=""> <!-- ikonka kategorii -->
+                Ryby
+              </h3>
+
+              <p>W naszej ofercie znajdziesz szeroki wybór ryb akwariowych pochodzących od sprawdzonych hodowców. 
+              Oferujemy gatunki odpowiednie zarówno dla początkujących miłośników akwarystyki, jak i doświadczonych pasjonatów. 
+              Kolorowe ryby towarzyskie, spokojne gatunki denne, efektowne ryby ozdobne oraz mieszkańcy akwariów morskich – 
+              każdy znajdzie tutaj idealnych mieszkańców swojego zbiornika.</p>
+
+              <a class="btn btn-outline-primary" href="ryby.html">
+                Zobacz
+              </a> <!-- przycisk przejścia do strony z rybami -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4"> <!-- druga kolumna -->
+          <div class="card"> <!-- karta Bootstrap grupująca zawartość -->
+            <div class="card-body"> <!-- główna zawartość karty -->
+
+              <h3 class="card-title">
+                <img class="icon-sm" src="ikony/grow-plant.png" alt=""> <!-- ikonka kategorii -->
+                Rosliny
+              </h3>
+
+              <p>Rośliny akwariowe nie tylko podkreślają naturalne piękno zbiornika, ale również wpływają na jego równowagę biologiczną. 
+              W tej kategorii znajdziesz starannie wyselekcjonowane gatunki roślin o różnorodnych kształtach, kolorach i wymaganiach. 
+              Oferujemy rośliny dla początkujących, łatwe w uprawie i odporne na zmienne warunki, jak również gatunki przeznaczone do 
+              zaawansowanych aranżacji typu aquascaping.</p>
+
+              <a class="btn btn-outline-success" href="rosliny.html">
+                Zobacz
+              </a> <!-- przycisk przejścia do strony z roślinami -->
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4"> <!-- trzecia kolumna -->
+          <div class="card"> <!-- karta Bootstrap grupująca zawartość -->
+            <div class="card-body"> <!-- główna zawartość karty -->
+
+              <h3 class="card-title">
+                <img class="icon-sm" src="ikony/fish-tank.png" alt=""> <!-- ikonka kategorii -->
+                Sprzet
+              </h3>
+
+              <p>Prawidłowo dobrany sprzęt to podstawa funkcjonowania każdego akwarium. Oferujemy nowoczesne i niezawodne wyposażenie, 
+              które pomaga utrzymać odpowiednie warunki dla ryb i roślin. W naszym asortymencie znajdują się filtry, oświetlenie, grzałki, 
+              pompy, napowietrzacze, testy wody oraz wiele innych akcesoriów niezbędnych do codziennej pielęgnacji zbiornika.</p>
+
+              <a class="btn btn-warning" href="sprzet.html">
+                Zobacz
+              </a> <!-- przycisk przejścia do strony ze sprzętem -->
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="container py-4"> <!-- sekcja z polecanymi zestawami -->
+
+  <h2 class="section-title">Polecane zestawy na start</h2> <!-- nagłówek sekcji -->
+
+  <p class="text-muted">Kilka prostych propozycji dla osob, ktore dopiero skladaja swoje pierwsze akwarium.</p>
+  <!-- krótki opis sekcji -->
+
+  <div class="row g-3 mt-2"> <!-- układ trzech kolumn Bootstrap -->
+
+    <div class="col-md-4"> <!-- pierwsza kolumna -->
+      <div class="card offer-card offer-blue"> <!-- karta prezentująca ofertę -->
+        <div class="card-body"> <!-- główna zawartość karty -->
+
+          <span class="badge bg-primary text-white">start</span> <!-- etykieta oferty -->
+
+          <h3 class="card-title mt-2">Zestaw 54 l</h3> <!-- nazwa produktu -->
+
+          <p>Akwarium, filtr, grzalka, pokrywa i podstawowe akcesoria do pierwszego zbiornika.</p>
+
+          <p class="mini-price">od 249 zl</p> <!-- wyświetlenie ceny -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4"> <!-- druga kolumna -->
+      <div class="card offer-card offer-green"> <!-- karta prezentująca ofertę -->
+        <div class="card-body"> <!-- główna zawartość karty -->
+
+          <span class="badge bg-success text-white">rosliny</span> <!-- etykieta oferty -->
+
+          <h3 class="card-title mt-2">Pakiet roslin latwych</h3> <!-- nazwa produktu -->
+
+          <p>Anubias, nurzaniec i kryptokoryna, czyli rosliny, ktore nie wymagaja mocnego swiatla.</p>
+
+          <p class="mini-price">od 39 zl</p> <!-- wyświetlenie ceny -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4"> <!-- trzecia kolumna -->
+      <div class="card offer-card offer-yellow"> <!-- karta prezentująca ofertę -->
+        <div class="card-body"> <!-- główna zawartość karty -->
+
+          <span class="badge bg-warning">serwis</span> <!-- etykieta oferty -->
+
+          <h3 class="card-title mt-2">Pakiet pielegnacyjny</h3> <!-- nazwa produktu -->
+
+          <p>Odmulacz, siatka, czyscik do szyb i uzdatniacz do wody przydatny przy podmianach.</p>
+
+          <p class="mini-price">od 59 zl</p> <!-- wyświetlenie ceny -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="container py-4"> <!-- sekcja z instrukcją zakładania akwarium -->
+
+  <div class="row g-4"> <!-- podział zawartości na dwie kolumny -->
+
+    <div class="col-md-7"> <!-- większa kolumna z tabelą -->
+
+      <h2 class="section-title">Szybki start akwarium</h2> <!-- nagłówek tabeli -->
+
+      <table class="table table-striped mt-3"> <!-- tabela Bootstrap z naprzemiennym kolorem wierszy -->
+
+        <thead> <!-- nagłówek tabeli -->
+          <tr> <!-- wiersz nagłówkowy -->
+            <th>Krok</th> <!-- kolumna numeru kroku -->
+            <th>Co zrobic?</th> <!-- kolumna opisu czynności -->
+            <th>Kiedy?</th> <!-- kolumna terminu wykonania -->
+          </tr>
+        </thead>
+
+        <tbody> <!-- główna zawartość tabeli -->
+
+          <tr> <!-- pierwszy wiersz tabeli -->
+            <td>1</td>
+            <td>Ustaw akwarium i wsyp podloze.</td>
+            <td>Dzien 1</td>
+          </tr>
+
+          <tr> <!-- drugi wiersz tabeli -->
+            <td>2</td>
+            <td>Posadz rosliny oraz uruchom filtr.</td>
+            <td>Dzien 1</td>
+          </tr>
+
+          <tr> <!-- trzeci wiersz tabeli -->
+            <td>3</td>
+            <td>Odczekaj, az zbiornik dojrzeje.</td>
+            <td>2-3 tygodnie</td>
+          </tr>
+
+          <tr> <!-- czwarty wiersz tabeli -->
+            <td>4</td>
+            <td>Wpuszczaj ryby stopniowo.</td>
+            <td>Po testach wody</td>
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+    <div class="col-md-5"> <!-- mniejsza kolumna z informacją dla użytkownika -->
+
+      <div class="student-note p-3"> <!-- wyróżnione pole informacyjne -->
+
+        <h2>Masz pytanie?</h2> <!-- nagłówek komunikatu -->
+
+        <p>Wypelnij formularz planowania akwarium, a nasz pracownik odezwie się do Ciebie w ciągu najbliższych 24h roboczych.</p>
+
+        <a class="btn btn-success" href="formularz.html">
+          Przejdz do formularza
+        </a> <!-- przycisk prowadzący do formularza -->
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main> <!-- koniec głównej zawartości strony -->
+
+<footer class="footer py-3"> <!-- stopka strony -->
+
+  <div class="container">
+    Projekt zaliczeniowy - Mateusz Małek
+  </div> <!-- informacja o autorze projektu -->
+
+</footer>
+
+<script src="bootstrap/bootstrap_js.js"></script> <!-- dołączenie biblioteki Bootstrap JavaScript -->
+
+<script src="js/main.js"></script> <!-- dołączenie własnego pliku JavaScript -->
+
+</body> <!-- koniec widocznej części strony -->
+
+</html> <!-- koniec dokumentu HTML -->

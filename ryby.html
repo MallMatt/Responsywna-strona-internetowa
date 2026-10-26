@@ -1,0 +1,173 @@
+<!doctype html> <!-- informacja o użyciu standardu HTML5 -->
+<html lang="pl"> <!-- początek dokumentu, język polski -->
+
+<head> <!-- sekcja ustawień strony -->
+  <meta charset="utf-8"> <!-- obsługa polskich znaków -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- dostosowanie do urządzeń mobilnych -->
+  <title>Ryby akwariowe</title> <!-- tytuł strony -->
+  <link rel="stylesheet" href="bootstrap/bootstrap_css.css"> <!-- dołączenie stylów Bootstrap -->
+  <link rel="stylesheet" href="css/style.css"> <!-- dołączenie własnego arkusza stylów -->
+</head>
+
+<body> <!-- początek widocznej części strony -->
+
+  <header class="site-top"> <!-- nagłówek strony -->
+    <nav class="navbar navbar-expand-lg"> <!-- menu nawigacyjne Bootstrap -->
+
+      <div class="container"> <!-- kontener ograniczający szerokość strony -->
+
+        <a class="navbar-brand" href="index.html">
+          <img class="icon-sm" src="ikony/clown-fish.png" alt=""> <!-- logo strony -->
+          AkwaStart
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          ☰
+        </button> <!-- przycisk rozwijający menu na urządzeniach mobilnych -->
+
+        <div class="collapse navbar-collapse" id="mainNav"> <!-- rozwijana część menu -->
+
+          <ul class="navbar-nav"> <!-- lista elementów menu -->
+
+            <li><a class="nav-link" href="index.html">Start</a></li> <!-- link do strony głównej -->
+            <li><a class="nav-link active" href="ryby.html">Ryby</a></li> <!-- aktywna strona -->
+            <li><a class="nav-link" href="rosliny.html">Rosliny</a></li> <!-- link do roślin -->
+            <li><a class="nav-link" href="sprzet.html">Sprzet</a></li> <!-- link do sprzętu -->
+            <li><a class="nav-link" href="formularz.html">Formularz</a></li> <!-- link do formularza -->
+            <li><a class="nav-link" href="pomoc.html">Pomoc akwaryscie</a></li> <!-- link do pomocy -->
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+  </header>
+
+  <main class="container py-4"> <!-- główna zawartość strony -->
+
+    <div class="row g-4 align-items-center"> <!-- układ dwóch kolumn -->
+
+      <div class="col-md-7"> <!-- lewa kolumna z tekstem -->
+
+        <h1 class="section-title">Ryby do pierwszego akwarium</h1> <!-- nagłówek strony -->
+
+        <p>
+          Na start najlepiej wybierac gatunki spokojne i latwe w karmieniu.
+          Należy pamiętać o tym aby nie przerybić zbiornika, ponieważ wpłynie to
+          negatywnie na nasze ryby.
+        </p> <!-- krótki opis dla początkujących akwarystów -->
+
+      </div>
+
+      <div class="col-md-5"> <!-- prawa kolumna ze zdjęciem -->
+
+        <img class="card" src="zdjęcia/zdjęcie2.jpg" alt="Kolorowe ryby">
+        <!-- zdjęcie przedstawiające ryby akwariowe -->
+
+      </div>
+
+    </div>
+
+    <!-- zLab1: tabela HTML pokazuje dane w czytelnej strukturze. -->
+
+    <section class="my-4"> <!-- sekcja z tabelą gatunków ryb -->
+
+      <h2>Dobór akwarium do gatunku ryb</h2> <!-- nagłówek tabeli -->
+
+      <div class="table-responsive"> <!-- responsywna tabela Bootstrap -->
+
+        <table class="table table-striped"> <!-- tabela z naprzemiennym kolorem wierszy -->
+
+          <thead> <!-- nagłówek tabeli -->
+
+            <tr>
+              <th>Gatunek</th> <!-- nazwa ryby -->
+              <th>Minimum</th> <!-- minimalna pojemność akwarium -->
+              <th>Uwagi</th> <!-- dodatkowe informacje -->
+            </tr>
+
+          </thead>
+
+          <tbody> <!-- główna zawartość tabeli -->
+
+            <tr>
+              <td>Gupik</td>
+              <td>54 l</td>
+              <td>Kolorowy, szybko sie mnozy.</td>
+            </tr>
+
+            <tr>
+              <td>Kirysek panda</td>
+              <td>60 l</td>
+              <td>Lubi dno z drobnym piaskiem.</td>
+            </tr>
+
+            <tr>
+              <td>Neon Innesa</td>
+              <td>60 l</td>
+              <td>Najlepiej w stadzie od 8 sztuk.</td>
+            </tr>
+
+            <tr>
+              <td>Bojownik</td>
+              <td>25 l</td>
+              <td>Raczej pojedynczo z lagodna obsada.</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+    <section class="row g-3"> <!-- sekcja z poradami dla początkujących -->
+
+      <h2>Dobre porady na start</h2> <!-- nagłówek sekcji -->
+
+      <div class="col-md-4"> <!-- pierwsza porada -->
+
+        <div class="alert alert-primary">
+          Nie wpuszczaj ryb do swiezo zalanego akwarium.
+        </div> <!-- komunikat informacyjny -->
+
+      </div>
+
+      <div class="col-md-4"> <!-- druga porada -->
+
+        <div class="alert alert-success">
+          Najpierw sprawdz filtr i temperature.
+        </div> <!-- komunikat informacyjny -->
+
+      </div>
+
+      <div class="col-md-4"> <!-- trzecia porada -->
+
+        <div class="alert alert-warning">
+          Karmienie male, ale regularne.
+        </div> <!-- komunikat informacyjny -->
+
+      </div>
+
+    </section>
+
+  </main> <!-- koniec głównej zawartości strony -->
+
+  <footer class="footer py-3"> <!-- stopka strony -->
+
+    <div class="container">
+      Projekt zaliczeniowy - Mateusz Małek
+    </div> <!-- informacja o autorze -->
+
+  </footer>
+
+  <script src="bootstrap/bootstrap_js.js"></script> <!-- biblioteka Bootstrap JavaScript -->
+
+  <script src="js/main.js"></script> <!-- własny plik JavaScript -->
+
+</body> <!-- koniec widocznej części strony -->
+
+</html> <!-- koniec dokumentu HTML -->

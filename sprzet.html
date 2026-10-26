@@ -1,0 +1,174 @@
+<!doctype html> <!-- informacja o użyciu standardu HTML5 -->
+<html lang="pl"> <!-- początek dokumentu, język polski -->
+
+<head> <!-- sekcja ustawień strony -->
+  <meta charset="utf-8"> <!-- obsługa polskich znaków -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- dostosowanie do urządzeń mobilnych -->
+  <title>Sprzet akwariowy</title> <!-- tytuł strony -->
+  <link rel="stylesheet" href="bootstrap/bootstrap_css.css"> <!-- dołączenie stylów Bootstrap -->
+  <link rel="stylesheet" href="css/style.css"> <!-- dołączenie własnego arkusza stylów -->
+</head>
+
+<body> <!-- początek widocznej części strony -->
+
+  <header class="site-top"> <!-- nagłówek strony -->
+
+    <nav class="navbar navbar-expand-lg"> <!-- menu nawigacyjne Bootstrap -->
+
+      <div class="container"> <!-- kontener ograniczający szerokość strony -->
+
+        <a class="navbar-brand" href="index.html">
+          <img class="icon-sm" src="ikony/clown-fish.png" alt=""> <!-- logo strony -->
+          AkwaStart
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          ☰
+        </button> <!-- przycisk rozwijający menu na urządzeniach mobilnych -->
+
+        <div class="collapse navbar-collapse" id="mainNav"> <!-- rozwijana część menu -->
+
+          <ul class="navbar-nav"> <!-- lista elementów menu -->
+
+            <li><a class="nav-link" href="index.html">Start</a></li> <!-- link do strony głównej -->
+            <li><a class="nav-link" href="ryby.html">Ryby</a></li> <!-- link do strony Ryby -->
+            <li><a class="nav-link" href="rosliny.html">Rosliny</a></li> <!-- link do strony Rośliny -->
+            <li><a class="nav-link active" href="sprzet.html">Sprzet</a></li> <!-- aktywna strona -->
+            <li><a class="nav-link" href="formularz.html">Formularz</a></li> <!-- link do formularza -->
+            <li><a class="nav-link" href="pomoc.html">Pomoc akwaryscie</a></li> <!-- link do strony pomocy -->
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main class="container py-4"> <!-- główna zawartość strony -->
+
+    <!-- zLab6: kalkulator korzysta z JavaScript i pobiera wartosci z pol formularza. -->
+
+    <div class="row g-4">
+      <!-- układ dwóch kolumn Bootstrap -->
+
+      <div class="col-md-6">
+        <!-- lewa kolumna z opisem sprzętu -->
+
+        <h1 class="section-title">Sprzet</h1>
+        <!-- główny nagłówek strony -->
+
+        <p>
+          Podstawowy zestaw to filtr, grzalka, oswietlenie,
+          podloze i testy wody.
+        </p>
+        <!-- krótki opis niezbędnego wyposażenia akwarium -->
+
+        <img class="card" src="zdjęcia/zdjęcie6.jpg" alt="Sprzet akwariowy">
+        <!-- zdjęcie przedstawiające sprzęt akwariowy -->
+
+      </div>
+
+      <div class="col-md-6">
+        <!-- prawa kolumna z kalkulatorem -->
+
+        <div class="card">
+          <!-- karta Bootstrap grupująca elementy kalkulatora -->
+
+          <div class="card-body">
+
+            <h2>Kalkulator litrazu</h2>
+            <!-- nagłówek kalkulatora -->
+
+            <p>Wpisz wymiary akwarium w centymetrach.</p>
+            <!-- instrukcja dla użytkownika -->
+
+            <label class="form-label" for="tankLength">
+              Dlugosc
+            </label>
+            <!-- etykieta pola długości -->
+
+            <input class="form-control mb-2" id="tankLength" type="number" min="1" value="60">
+            <!-- pole wprowadzania długości akwarium -->
+
+            <label class="form-label" for="tankWidth">
+              Szerokosc
+            </label>
+            <!-- etykieta pola szerokości -->
+
+            <input class="form-control mb-2" id="tankWidth" type="number" min="1" value="30">
+            <!-- pole wprowadzania szerokości akwarium -->
+
+            <label class="form-label" for="tankHeight">
+              Wysokosc
+            </label>
+            <!-- etykieta pola wysokości -->
+
+            <input class="form-control mb-3" id="tankHeight" type="number" min="1" value="35">
+            <!-- pole wprowadzania wysokości akwarium -->
+
+            <button class="btn btn-primary" id="calcWaterBtn" type="button">
+              Oblicz
+            </button>
+            <!-- przycisk uruchamiający obliczenia -->
+
+            <div class="result-box mt-3" id="waterResult">
+              Wynik pojawi sie tutaj.
+            </div>
+            <!-- miejsce wyświetlania wyniku obliczeń -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- simple-flex pokazuje trzy najwazniejsze elementy sprzetu w jednym rzedzie. -->
+
+    <section class="simple-flex mt-4">
+      <!-- sekcja z podstawowymi informacjami o sprzęcie -->
+
+      <div class="alert alert-primary">
+        <strong>Filtr</strong><br>
+        Powinien chodzic caly czas.
+      </div>
+      <!-- informacja o filtrze -->
+
+      <div class="alert alert-success">
+        <strong>Grzalka</strong><br>
+        Przydatna dla ryb tropikalnych.
+      </div>
+      <!-- informacja o grzałce -->
+
+      <div class="alert alert-warning">
+        <strong>Swiatlo</strong><br>
+        Nie swiec za dlugo na poczatku.
+      </div>
+      <!-- informacja o oświetleniu -->
+
+    </section>
+
+  </main> <!-- koniec głównej zawartości strony -->
+
+  <footer class="footer py-3"> <!-- stopka strony -->
+
+    <div class="container">
+      Projekt zaliczeniowy - Mateusz Małek
+    </div>
+    <!-- informacja o autorze projektu -->
+
+  </footer>
+
+  <script src="bootstrap/bootstrap_js.js"></script>
+  <!-- dołączenie biblioteki Bootstrap JavaScript -->
+
+  <script src="js/main.js"></script>
+  <!-- dołączenie własnego pliku JavaScript -->
+
+</body> <!-- koniec widocznej części strony -->
+
+</html> <!-- koniec dokumentu HTML -->

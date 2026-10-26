@@ -1,0 +1,234 @@
+<!doctype html> <!-- informacja o użyciu standardu HTML5 -->
+<html lang="pl"> <!-- początek dokumentu, język polski -->
+
+<head> <!-- sekcja ustawień strony -->
+  <meta charset="utf-8"> <!-- obsługa polskich znaków -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- dostosowanie do urządzeń mobilnych -->
+  <title>Formularz akwarysty</title> <!-- tytuł strony -->
+  <link rel="stylesheet" href="bootstrap/bootstrap_css.css"> <!-- dołączenie stylów Bootstrap -->
+  <link rel="stylesheet" href="css/style.css"> <!-- dołączenie własnego arkusza stylów -->
+</head>
+
+<body> <!-- początek widocznej części strony -->
+
+  <header class="site-top"> <!-- nagłówek strony -->
+
+    <nav class="navbar navbar-expand-lg"> <!-- menu nawigacyjne Bootstrap -->
+
+      <div class="container"> <!-- kontener ograniczający szerokość strony -->
+
+        <a class="navbar-brand" href="index.html">
+          <img class="icon-sm" src="ikony/clown-fish.png" alt=""> <!-- logo strony -->
+          AkwaStart
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          ☰
+        </button> <!-- przycisk rozwijający menu na urządzeniach mobilnych -->
+
+        <div class="collapse navbar-collapse" id="mainNav"> <!-- rozwijana część menu -->
+
+          <ul class="navbar-nav"> <!-- lista elementów menu -->
+
+            <li><a class="nav-link" href="index.html">Start</a></li> <!-- link do strony głównej -->
+            <li><a class="nav-link" href="ryby.html">Ryby</a></li> <!-- link do strony Ryby -->
+            <li><a class="nav-link" href="rosliny.html">Rosliny</a></li> <!-- link do strony Rośliny -->
+            <li><a class="nav-link" href="sprzet.html">Sprzet</a></li> <!-- link do strony Sprzęt -->
+            <li><a class="nav-link active" href="formularz.html">Formularz</a></li> <!-- aktywna strona -->
+            <li><a class="nav-link" href="pomoc.html">Pomoc akwaryscie</a></li> <!-- link do strony pomocy -->
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main class="container py-4"> <!-- główna zawartość strony -->
+
+    <h1 class="section-title">Formularz planowania akwarium</h1>
+    <!-- główny nagłówek strony -->
+
+    <p>
+      Formularz sprawdza pola lokalnie, bez wysylania danych do internetu.
+    </p>
+    <!-- krótki opis działania formularza -->
+
+    <!-- zLab4: formularz HTML5 wykorzystuje input, radio, checkbox, select i textarea. -->
+
+    <form id="contactForm" class="card p-4" action="#" method="post">
+      <!-- formularz planowania akwarium -->
+
+      <div class="row g-3">
+        <!-- układ pól formularza w dwóch kolumnach -->
+
+        <div class="col-md-6">
+
+          <label class="form-label" for="name">
+            Imie
+          </label>
+          <!-- etykieta pola imienia -->
+
+          <input class="form-control"
+                 id="name"
+                 name="name"
+                 type="text"
+                 minlength="3"
+                 required
+                 placeholder="np. Mateusz">
+          <!-- pole wprowadzania imienia -->
+
+        </div>
+
+        <div class="col-md-6">
+
+          <label class="form-label" for="email">
+            Email
+          </label>
+          <!-- etykieta pola adresu e-mail -->
+
+          <input class="form-control"
+                 id="email"
+                 name="email"
+                 type="email"
+                 required
+                 placeholder="adres@email.pl">
+          <!-- pole wprowadzania adresu e-mail -->
+
+        </div>
+
+        <div class="col-md-6">
+
+          <label class="form-label" for="liters">
+            Litraż akwarium
+          </label>
+          <!-- etykieta pola litrażu akwarium -->
+
+          <input class="form-control"
+                 id="liters"
+                 name="liters"
+                 type="number"
+                 min="10"
+                 max="600"
+                 required>
+          <!-- pole wprowadzania pojemności akwarium -->
+
+        </div>
+
+        <div class="col-md-6">
+
+          <label class="form-label" for="level">
+            Poziom
+          </label>
+          <!-- etykieta listy wyboru poziomu zaawansowania -->
+
+          <select class="form-select" id="level" name="level">
+            <option>Poczatkujacy</option>
+            <option>Sredni</option>
+            <option>Zaawansowany</option>
+          </select>
+          <!-- lista wyboru poziomu doświadczenia -->
+
+        </div>
+
+      </div>
+
+      <fieldset class="mt-3">
+        <!-- grupa przycisków wyboru typu akwarium -->
+
+        <legend>Typ akwarium</legend>
+
+        <label class="form-check">
+          <input type="radio" name="type" value="towarzyskie" checked>
+          Towarzyskie
+        </label>
+
+        <label class="form-check">
+          <input type="radio" name="type" value="roslinne">
+          Roslinne
+        </label>
+
+        <label class="form-check">
+          <input type="radio" name="type" value="krewetkarium">
+          Krewetkarium
+        </label>
+
+      </fieldset>
+
+      <fieldset class="mt-3">
+        <!-- grupa pól wyboru posiadanego sprzętu -->
+
+        <legend>Co juz masz?</legend>
+
+        <label class="form-check">
+          <input type="checkbox" name="gear" value="filtr">
+          Filtr
+        </label>
+
+        <label class="form-check">
+          <input type="checkbox" name="gear" value="grzalka">
+          Grzalka
+        </label>
+
+        <label class="form-check">
+          <input type="checkbox" name="gear" value="testy">
+          Testy wody
+        </label>
+
+      </fieldset>
+
+      <label class="form-label mt-3" for="notes">
+        Uwagi
+      </label>
+      <!-- etykieta pola dodatkowych informacji -->
+
+      <textarea class="form-control"
+                id="notes"
+                name="notes"
+                rows="4"
+                placeholder="Napisz, jakie ryby planujesz."></textarea>
+      <!-- pole do wpisania dodatkowych uwag -->
+
+      <div class="mt-3">
+        <!-- sekcja przycisków formularza -->
+
+        <button class="btn btn-success" type="submit">
+          Wyślij
+        </button>
+        <!-- przycisk wysłania formularza -->
+
+        <button class="btn" type="reset">
+          Wyczysc
+        </button>
+        <!-- przycisk czyszczenia formularza -->
+
+      </div>
+
+      <div id="formMessage" class="mt-3"></div>
+      <!-- miejsce wyświetlania komunikatów formularza -->
+
+    </form>
+
+  </main> <!-- koniec głównej zawartości strony -->
+
+  <footer class="footer py-3"> <!-- stopka strony -->
+
+    <div class="container">
+      Projekt zaliczeniowy - Mateusz Małek
+    </div>
+    <!-- informacja o autorze projektu -->
+
+  </footer>
+
+  <script src="bootstrap/bootstrap_js.js"></script>
+  <!-- dołączenie biblioteki Bootstrap JavaScript -->
+
+  <script src="js/main.js"></script>
+  <!-- dołączenie własnego pliku JavaScript -->
+
+</body> <!-- koniec widocznej części strony -->
+
+</html> <!-- koniec dokumentu HTML -->

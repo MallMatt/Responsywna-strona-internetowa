@@ -1,0 +1,239 @@
+<!doctype html> <!-- informacja o użyciu standardu HTML5 -->
+<html lang="pl"> <!-- początek dokumentu, język polski -->
+
+<head> <!-- sekcja ustawień strony -->
+  <meta charset="utf-8"> <!-- obsługa polskich znaków -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- dostosowanie do urządzeń mobilnych -->
+  <title>Pomoc akwaryscie</title> <!-- tytuł strony -->
+  <link rel="stylesheet" href="bootstrap/bootstrap_css.css"> <!-- dołączenie stylów Bootstrap -->
+  <link rel="stylesheet" href="css/style.css"> <!-- dołączenie własnego arkusza stylów -->
+</head>
+
+<body> <!-- początek widocznej części strony -->
+
+  <header class="site-top"> <!-- nagłówek strony -->
+
+    <nav class="navbar navbar-expand-lg"> <!-- menu nawigacyjne Bootstrap -->
+
+      <div class="container"> <!-- kontener ograniczający szerokość strony -->
+
+        <a class="navbar-brand" href="index.html">
+          <img class="icon-sm" src="ikony/clown-fish.png" alt=""> <!-- logo strony -->
+          AkwaStart
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          ☰
+        </button> <!-- przycisk rozwijający menu na urządzeniach mobilnych -->
+
+        <div class="collapse navbar-collapse" id="mainNav"> <!-- rozwijana część menu -->
+
+          <ul class="navbar-nav"> <!-- lista elementów menu -->
+
+            <li><a class="nav-link" href="index.html">Start</a></li> <!-- link do strony głównej -->
+            <li><a class="nav-link" href="ryby.html">Ryby</a></li> <!-- link do strony Ryby -->
+            <li><a class="nav-link" href="rosliny.html">Rosliny</a></li> <!-- link do strony Rośliny -->
+            <li><a class="nav-link" href="sprzet.html">Sprzet</a></li> <!-- link do strony Sprzęt -->
+            <li><a class="nav-link" href="formularz.html">Formularz</a></li> <!-- link do formularza -->
+            <li><a class="nav-link active" href="pomoc.html">Pomoc akwaryscie</a></li> <!-- aktywna strona -->
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main class="container py-4"> <!-- główna zawartość strony -->
+
+    <h1 class="section-title">Pomoc akwaryscie</h1>
+    <!-- główny nagłówek strony -->
+
+    <p class="text-muted">
+      Najczestsze problemy w akwarium i lokalny notatnik
+    </p>
+    <!-- krótki opis funkcjonalności strony -->
+
+    <div class="row g-4">
+      <!-- układ dwóch kolumn Bootstrap -->
+
+      <div class="col-md-6">
+        <!-- lewa kolumna z systemem szybkiej pomocy -->
+
+        <div class="card">
+
+          <div class="card-body">
+
+            <h2>Szybka pomoc</h2>
+            <!-- nagłówek sekcji pomocy -->
+
+            <div class="mb-3" role="group" aria-label="Wybór problemu">
+              <!-- grupa przycisków wybierających rodzaj problemu -->
+
+              <button class="btn btn-primary" type="button" data-spa-view="woda">
+                Problem z wodą
+              </button>
+
+              <button class="btn btn-success" type="button" data-spa-view="ryby">
+                Ryby
+              </button>
+
+              <button class="btn btn-warning" type="button" data-spa-view="glony">
+                Glony
+              </button>
+
+            </div>
+
+            <div id="spaPanel" class="spa-panel">
+              <!-- panel, w którym JavaScript wyświetla poradę -->
+
+              <h3>Wybierz problem</h3>
+              <p>Kliknij przycisk aby zobaczyć poradę.</p>
+
+            </div>
+
+            <template id="woda">
+              <!-- szablon porady dotyczącej problemów z wodą -->
+
+              <h3>Problem z wodą</h3>
+
+              <p>
+                Mętna woda wynika z niedojrzałego akwarium, braku filtracji lub
+                przekarmienia ryb.
+              </p>
+
+            </template>
+
+            <template id="ryby">
+              <!-- szablon porady dotyczącej ryb -->
+
+              <h3>Ryby</h3>
+
+              <p>
+                Dziwne zachowanie ryb może oznaczać stres,
+                złe parametry wody lub choroby.
+              </p>
+
+            </template>
+
+            <template id="glony">
+              <!-- szablon porady dotyczącej glonów -->
+
+              <h3>Glony</h3>
+
+              <p>
+                Glony pojawiają się przy nadmiarze światła
+                i składników odżywczych.
+              </p>
+
+            </template>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- zLab11: formularz zapisuje notatki w localStorage. -->
+
+      <div class="col-md-6">
+        <!-- prawa kolumna z notatnikiem akwarysty -->
+
+        <div class="card">
+
+          <div class="card-body">
+
+            <h2>Notatnik akwarysty</h2>
+            <!-- nagłówek sekcji notatek -->
+
+            <form id="storageForm">
+              <!-- formularz dodawania notatek -->
+
+              <label class="form-label" for="fishName">
+                Co zapisac?
+              </label>
+
+              <input class="form-control mb-2"
+                     id="fishName"
+                     required
+                     placeholder="np. podmiana wody">
+              <!-- pole wpisywania nazwy notatki -->
+
+              <label class="form-label" for="fishLiters">
+                Litraz akwarium
+              </label>
+
+              <input class="form-control mb-2"
+                     id="fishLiters"
+                     type="number"
+                     min="10"
+                     required
+                     value="60">
+              <!-- pole wpisywania litrażu akwarium -->
+
+              <label class="form-label" for="fishFood">
+                Kategoria
+              </label>
+
+              <select class="form-select mb-3" id="fishFood">
+                <!-- lista wyboru kategorii notatki -->
+
+                <option>serwis</option>
+                <option>karmienie</option>
+                <option>test wody</option>
+                <option>zakupy</option>
+
+              </select>
+
+              <button class="btn btn-success" type="submit">
+                Zapisz notatke
+              </button>
+              <!-- przycisk zapisania notatki -->
+
+              <button class="btn btn-outline-primary" id="clearStorage" type="button">
+                Usun notatki
+              </button>
+              <!-- przycisk usuwania wszystkich notatek -->
+
+            </form>
+
+            <h3 class="mt-3">Moje notatki</h3>
+            <!-- nagłówek listy zapisanych notatek -->
+
+            <ul id="storageList" class="storage-list"></ul>
+            <!-- lista wyświetlająca zapisane notatki -->
+
+            <p class="form-text" id="sessionInfo"></p>
+            <!-- miejsce na komunikaty generowane przez JavaScript -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main> <!-- koniec głównej zawartości strony -->
+
+  <footer class="footer py-3"> <!-- stopka strony -->
+
+    <div class="container">
+      Projekt zaliczeniowy - Mateusz Małek
+    </div>
+    <!-- informacja o autorze projektu -->
+
+  </footer>
+
+  <script src="bootstrap/bootstrap_js.js"></script>
+  <!-- dołączenie biblioteki Bootstrap JavaScript -->
+
+  <script src="js/main.js"></script>
+  <!-- dołączenie własnego pliku JavaScript -->
+
+</body> <!-- koniec widocznej części strony -->
+
+</html> <!-- koniec dokumentu HTML -->

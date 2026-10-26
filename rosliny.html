@@ -1,0 +1,143 @@
+<!doctype html> <!-- informacja o użyciu standardu HTML5 -->
+<html lang="pl"> <!-- początek dokumentu, język polski -->
+
+<head> <!-- sekcja ustawień strony -->
+  <meta charset="utf-8"> <!-- obsługa polskich znaków -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- dostosowanie do urządzeń mobilnych -->
+  <title>Rosliny akwariowe</title> <!-- tytuł strony -->
+  <link rel="stylesheet" href="bootstrap/bootstrap_css.css"> <!-- dołączenie stylów Bootstrap -->
+  <link rel="stylesheet" href="css/style.css"> <!-- dołączenie własnego arkusza stylów -->
+</head>
+
+<body> <!-- początek widocznej części strony -->
+
+  <header class="site-top"> <!-- nagłówek strony -->
+
+    <nav class="navbar navbar-expand-lg"> <!-- menu nawigacyjne Bootstrap -->
+
+      <div class="container"> <!-- kontener ograniczający szerokość strony -->
+
+        <a class="navbar-brand" href="index.html">
+          <img class="icon-sm" src="ikony/clown-fish.png" alt=""> <!-- logo strony -->
+          AkwaStart
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+          ☰
+        </button> <!-- przycisk rozwijający menu na urządzeniach mobilnych -->
+
+        <div class="collapse navbar-collapse" id="mainNav"> <!-- rozwijana część menu -->
+
+          <ul class="navbar-nav"> <!-- lista elementów menu -->
+
+            <li><a class="nav-link" href="index.html">Start</a></li> <!-- link do strony głównej -->
+            <li><a class="nav-link" href="ryby.html">Ryby</a></li> <!-- link do strony Ryby -->
+            <li><a class="nav-link active" href="rosliny.html">Rosliny</a></li> <!-- aktywna strona -->
+            <li><a class="nav-link" href="sprzet.html">Sprzet</a></li> <!-- link do strony Sprzęt -->
+            <li><a class="nav-link" href="formularz.html">Formularz</a></li> <!-- link do formularza -->
+            <li><a class="nav-link" href="pomoc.html">Pomoc akwaryscie</a></li> <!-- link do strony pomocy -->
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </nav>
+
+  </header>
+
+  <main class="container py-4"> <!-- główna zawartość strony -->
+
+    <!-- zLab3: ramka tip-box jest ustawiona przez float w CSS. -->
+
+    <h1 class="section-title">Rosliny i uklad zbiornika</h1>
+    <!-- główny nagłówek strony -->
+
+    <div class="tip-box">
+      <!-- wyróżniona ramka z poradą dla użytkownika -->
+
+      <strong>Porada:</strong>
+
+      <p class="mb-0">
+        Wysokie rosliny daj z tylu, a niskie z przodu.
+        Akwarium bedzie wygladalo naturalniej.
+      </p>
+
+    </div>
+
+    <p>
+      Rosliny poprawiaja wyglad akwarium i pomagaja ograniczac glony,
+      bo konkuruja o skladniki odzywcze.
+    </p>
+    <!-- opis korzyści wynikających z posiadania roślin -->
+
+    <p>
+      Do prostego akwarium pasuja anubiasy, mchy, kryptokoryny i nurzance.
+      Nie wymagaja trudnej pielegnacji.
+    </p>
+    <!-- przykłady łatwych roślin dla początkujących -->
+
+    <div class="clear-after"></div>
+    <!-- element czyszczący działanie float -->
+
+    <!-- Uklad Bootstrap dzieli obraz i opis na dwie kolumny. -->
+
+    <div class="row g-4 mt-3">
+      <!-- układ dwóch kolumn Bootstrap -->
+
+      <div class="col-md-5">
+        <!-- lewa kolumna ze zdjęciem -->
+
+        <img class="card" src="zdjęcia/zdjęcie4.jpg" alt="Rosliny akwariowe">
+        <!-- zdjęcie przedstawiające rośliny akwariowe -->
+
+      </div>
+
+      <div class="col-md-7">
+        <!-- prawa kolumna z instrukcją sadzenia -->
+
+        <h2>Plan sadzenia</h2>
+        <!-- nagłówek sekcji -->
+
+        <ol>
+          <!-- lista kroków zakładania roślin w akwarium -->
+
+          <li>Najpierw umyj żwir albo piasek.</li>
+
+          <li>Posadź rośliny przed wlaniem całej wody.</li>
+
+          <li>Nie zakopuj kłącza anubiasa.</li>
+
+          <li>Po starcie świeć krócej, około 6 godzin dziennie.</li>
+
+          <li>Po posadzeniu delikatnie uzupełnij wodę, aby nie wypłukać podłoża.</li>
+
+          <li>Regularnie obserwuj wzrost roślin i w razie potrzeby stosuj odpowiednie nawozy.</li>
+
+        </ol>
+
+      </div>
+
+    </div>
+
+  </main> <!-- koniec głównej zawartości strony -->
+
+  <footer class="footer py-3"> <!-- stopka strony -->
+
+    <div class="container">
+      Projekt zaliczeniowy - Mateusz Małek
+    </div>
+    <!-- informacja o autorze projektu -->
+
+  </footer>
+
+  <script src="bootstrap/bootstrap_js.js"></script>
+  <!-- dołączenie biblioteki Bootstrap JavaScript -->
+
+  <script src="js/main.js"></script>
+  <!-- dołączenie własnego pliku JavaScript -->
+
+</body> <!-- koniec widocznej części strony -->
+
+</html> <!-- koniec dokumentu HTML -->
