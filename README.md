@@ -32,8 +32,6 @@ zdjęcie4: https://unsplash.com/photos/live-corals-0G01UI1MQhg
 zdjęcie5: https://unsplash.com/photos/gray-and-yellow-fish-iLwQIbWxv-s
 zdjęcie6: https://unsplash.com/photos/green-plant-in-clear-glass-fish-tank-_LWxQJFgpyo
 
-
-
-
+Link do działającej strony: https://mallmatt.github.io/Responsywna-strona-internetowa/
 
 
