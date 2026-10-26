@@ -1,0 +1,798 @@
+/* Zestaw klas Bootstrap wykorzystanych w projekcie */
+
+
+/* Definicja zmiennych kolorystycznych wykorzystywanych przez klasy Bootstrap. */
+:root{
+  --bs-blue:#0d6efd;      /* kolor niebieski */
+  --bs-green:#198754;     /* kolor zielony */
+  --bs-yellow:#ffc107;    /* kolor żółty */
+  --bs-dark:#143642;      /* kolor ciemny */
+  --bs-light:#f8f9fa;     /* kolor jasny */
+  --bs-border:#dee2e6;    /* kolor obramowań */
+  --bs-white:#fff;        /* kolor biały */
+  --bs-body:#23343b;      /* domyślny kolor tekstu */
+  --bs-primary:#0d6efd;   /* kolor podstawowy */
+  --bs-success:#198754;   /* kolor sukcesu */
+  --bs-warning:#ffc107;   /* kolor ostrzeżenia */
+}
+
+
+/* Ustawienie modelu box-sizing dla wszystkich elementów strony. */
+*,
+*::before,
+*::after{
+  box-sizing:border-box;
+}
+
+
+/* Podstawowy styl dokumentu. */
+body{
+  margin:0; /* usunięcie domyślnych marginesów przeglądarki */
+  font-family:Arial,Helvetica,sans-serif; /* ustawienie kroju pisma */
+  font-size:16px; /* podstawowy rozmiar tekstu */
+  line-height:1.5; /* wysokość linii tekstu */
+  color:var(--bs-body); /* kolor tekstu */
+  background:#fff; /* kolor tła strony */
+}
+
+
+/* Style nagłówków od h1 do h5. */
+h1,h2,h3,h4,h5{
+  margin-top:0; /* usunięcie górnego marginesu */
+  margin-bottom:.55rem; /* odstęp pod nagłówkiem */
+  font-weight:700; /* pogrubienie tekstu */
+  line-height:1.2; /* wysokość linii */
+}
+
+
+/* Styl akapitów. */
+p{
+  margin-top:0; /* usunięcie górnego marginesu */
+  margin-bottom:1rem; /* odstęp pod akapitem */
+}
+
+
+/* Styl odnośników. */
+a{
+  color:#0b5ed7; /* kolor linku */
+  text-decoration:none; /* usunięcie podkreślenia */
+}
+
+
+/* Styl odnośnika po najechaniu kursorem. */
+a:hover{
+  text-decoration:underline; /* podkreślenie linku */
+}
+
+
+/* Domyślne ustawienia obrazów. */
+img{
+  max-width:100%; /* obraz nie przekroczy szerokości kontenera */
+  height:auto; /* zachowanie proporcji obrazu */
+}
+
+
+/* Główny kontener Bootstrap ograniczający szerokość strony. */
+.container{
+  width:100%; /* szerokość 100% dostępnego miejsca */
+  max-width:1140px; /* maksymalna szerokość kontenera */
+  margin-left:auto; /* wyśrodkowanie kontenera */
+  margin-right:auto; /* wyśrodkowanie kontenera */
+  padding-left:16px; /* wewnętrzny odstęp z lewej strony */
+  padding-right:16px; /* wewnętrzny odstęp z prawej strony */
+}
+
+
+/* Wiersz siatki Bootstrap. */
+.row{
+  display:flex; /* wykorzystanie Flexbox */
+  flex-wrap:wrap; /* możliwość przenoszenia elementów do kolejnego wiersza */
+  margin-left:-12px; /* kompensacja paddingów kolumn */
+  margin-right:-12px; /* kompensacja paddingów kolumn */
+}
+
+
+/* Wspólne ustawienia dla wszystkich kolumn znajdujących się w wierszu. */
+.row>*{
+  padding-left:12px; /* odstęp po lewej stronie kolumny */
+  padding-right:12px; /* odstęp po prawej stronie kolumny */
+  width:100%; /* pełna szerokość na małych ekranach */
+}
+
+
+/* Klasy definiujące odstępy pomiędzy wierszami i elementami. */
+.g-3{
+  row-gap:1rem;
+}
+
+.g-4{
+  row-gap:1.5rem;
+}
+
+
+/* Wyrównanie elementów w osi pionowej. */
+.align-items-center{
+  align-items:center;
+}
+
+
+/* Rozłożenie elementów na przeciwległych końcach kontenera. */
+.justify-content-between{
+  justify-content:space-between;
+}
+
+
+/* Wyrównanie tekstu do środka. */
+.text-center{
+  text-align:center;
+}
+
+
+/* Wyrównanie tekstu do prawej strony. */
+.text-end{
+  text-align:right;
+}
+
+
+/* Ustawienie układu Flexbox. */
+.d-flex{
+  display:flex;
+}
+
+
+/* Ustawienie układu Grid. */
+.d-grid{
+  display:grid;
+}
+
+
+/* Ukrycie elementu. */
+.d-none{
+  display:none;
+}
+
+
+/* Odstęp pomiędzy elementami równy 0.5 rem. */
+.gap-2{
+  gap:.5rem;
+}
+
+
+/* Odstęp pomiędzy elementami równy 1 rem. */
+.gap-3{
+  gap:1rem;
+}
+
+
+/* Możliwość zawijania elementów do kolejnego wiersza. */
+.flex-wrap{
+  flex-wrap:wrap;
+}
+
+
+/* Klasy marginesów i odstępów wykorzystywane w Bootstrap. */
+
+.mt-2{
+  margin-top:.5rem;
+}
+
+.mt-3{
+  margin-top:1rem;
+}
+
+.mt-4{
+  margin-top:1.5rem;
+}
+
+.mb-0{
+  margin-bottom:0;
+}
+
+.mb-2{
+  margin-bottom:.5rem;
+}
+
+.mb-3{
+  margin-bottom:1rem;
+}
+
+.mb-4{
+  margin-bottom:1.5rem;
+}
+
+.my-4{
+  margin-top:1.5rem;
+  margin-bottom:1.5rem;
+}
+
+.py-3{
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
+.py-4{
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+}
+
+.py-5{
+  padding-top:3rem;
+  padding-bottom:3rem;
+}
+
+.p-3{
+  padding:1rem;
+}
+
+.p-4{
+  padding:1.5rem;
+}
+
+
+/* Główny kontener menu nawigacyjnego. */
+.navbar{
+  display:flex; /* wykorzystanie Flexbox */
+  align-items:center; /* wyśrodkowanie elementów w pionie */
+  min-height:64px; /* minimalna wysokość paska nawigacyjnego */
+  padding:.5rem 0; /* odstępy górny i dolny */
+}
+
+
+/* Kontener wewnętrzny menu. */
+.navbar .container{
+  display:flex;
+  align-items:center;
+  justify-content:space-between; /* rozmieszczenie elementów po przeciwnych stronach */
+  gap:1rem; /* odstęp pomiędzy elementami */
+}
+
+
+/* Styl logo lub nazwy strony w menu. */
+.navbar-brand{
+  font-weight:700; /* pogrubienie tekstu */
+  font-size:1.25rem; /* zwiększony rozmiar tekstu */
+  color:#fff; /* biały kolor tekstu */
+}
+
+
+/* Lista elementów menu. */
+.navbar-nav{
+  display:flex; /* wyświetlanie elementów obok siebie */
+  align-items:center; /* wyrównanie w pionie */
+  gap:.25rem; /* odstęp pomiędzy linkami */
+  margin:0; /* usunięcie marginesów */
+  padding:0; /* usunięcie wewnętrznych odstępów */
+  list-style:none; /* usunięcie kropek listy */
+}
+/* Styl pojedynczego odnośnika w menu nawigacyjnym. */
+.nav-link{
+  display:block; /* wyświetlanie linku jako element blokowy */
+  padding:.55rem .75rem; /* wewnętrzne odstępy */
+  color:#ecf8ff; /* kolor tekstu */
+  border-radius:.35rem; /* zaokrąglenie narożników */
+}
+
+
+/* Styl aktywnego linku oraz linku po najechaniu kursorem. */
+.nav-link:hover,
+.nav-link.active{
+  background:rgba(255,255,255,.18); /* półprzezroczyste tło */
+  color:#fff; /* biały kolor tekstu */
+  text-decoration:none; /* usunięcie podkreślenia */
+}
+
+
+/* Przycisk rozwijający menu na urządzeniach mobilnych. */
+.navbar-toggler{
+  display:none; /* domyślnie ukryty */
+  border:1px solid rgba(255,255,255,.55); /* obramowanie przycisku */
+  background:transparent; /* przezroczyste tło */
+  color:#fff; /* kolor ikony lub tekstu */
+  border-radius:.35rem; /* zaokrąglenie narożników */
+  padding:.45rem .6rem; /* wewnętrzne odstępy */
+  font-size:1.05rem; /* rozmiar tekstu */
+}
+
+
+/* Domyślny stan rozwijanej zawartości. */
+.collapse{
+  display:block;
+}
+
+
+/* Klasy kolorów tła. */
+
+.bg-primary{
+  background:#0d6efd;
+}
+
+.bg-success{
+  background:#198754;
+}
+
+.bg-warning{
+  background:#ffc107;
+}
+
+.bg-light{
+  background:#f8f9fa;
+}
+
+.bg-white{
+  background:#fff;
+}
+
+
+/* Klasy kolorów tekstu. */
+
+.text-white{
+  color:#fff;
+}
+
+.text-success{
+  color:#198754;
+}
+
+.text-primary{
+  color:#0d6efd;
+}
+
+.text-warning{
+  color:#997404;
+}
+
+.text-muted{
+  color:#667985;
+}
+
+
+/* Podstawowy styl przycisków. */
+.btn{
+  display:inline-block; /* możliwość ustawiania wymiarów */
+  border:1px solid transparent; /* obramowanie przycisku */
+  border-radius:.4rem; /* zaokrąglenie narożników */
+  padding:.55rem .85rem; /* wewnętrzne odstępy */
+  font-weight:600; /* pogrubienie tekstu */
+  cursor:pointer; /* zmiana kursora na wskaźnik */
+  text-align:center; /* wyśrodkowanie tekstu */
+  background:#e9ecef; /* kolor tła */
+  color:#143642; /* kolor tekstu */
+}
+
+
+/* Styl przycisku po najechaniu kursorem. */
+.btn:hover{
+  text-decoration:none; /* usunięcie podkreślenia */
+  filter:brightness(.96); /* lekkie przyciemnienie */
+}
+
+
+/* Podstawowy przycisk niebieski. */
+.btn-primary{
+  background:#0d6efd;
+  color:#fff;
+  border-color:#0d6efd;
+}
+
+
+/* Podstawowy przycisk zielony. */
+.btn-success{
+  background:#198754;
+  color:#fff;
+  border-color:#198754;
+}
+
+
+/* Podstawowy przycisk żółty. */
+.btn-warning{
+  background:#ffc107;
+  color:#1f2d32;
+  border-color:#ffc107;
+}
+
+
+/* Przycisk z niebieskim obramowaniem. */
+.btn-outline-primary{
+  background:#fff;
+  color:#0d6efd;
+  border-color:#0d6efd;
+}
+
+
+/* Przycisk z zielonym obramowaniem. */
+.btn-outline-success{
+  background:#fff;
+  color:#198754;
+  border-color:#198754;
+}
+
+
+/* Główny kontener karty Bootstrap. */
+.card{
+  background:#fff; /* kolor tła */
+  border:1px solid var(--bs-border); /* obramowanie */
+  border-radius:.5rem; /* zaokrąglenie narożników */
+  overflow:hidden; /* ukrycie zawartości wychodzącej poza kartę */
+  height:100%; /* pełna wysokość kontenera */
+}
+
+
+/* Wewnętrzna zawartość karty. */
+.card-body{
+  padding:1rem;
+}
+
+
+/* Tytuł karty. */
+.card-title{
+  font-size:1.15rem;
+}
+
+
+/* Obraz znajdujący się w górnej części karty. */
+.card-img-top{
+  width:100%;
+  display:block;
+}
+
+
+/* Styl etykiet Bootstrap (badge). */
+.badge{
+  display:inline-block;
+  padding:.35rem .5rem;
+  border-radius:.35rem;
+  font-size:.78rem;
+  font-weight:700;
+}
+
+
+/* Wspólny styl komunikatów alert. */
+.alert{
+  border:1px solid transparent;
+  border-radius:.5rem;
+  padding:.85rem 1rem;
+}
+
+
+/* Komunikat sukcesu. */
+.alert-success{
+  background:#e8f5ee;
+  border-color:#badbcc;
+  color:#0f5132;
+}
+
+
+/* Komunikat ostrzegawczy. */
+.alert-warning{
+  background:#fff3cd;
+  border-color:#ffecb5;
+  color:#664d03;
+}
+
+
+/* Komunikat informacyjny. */
+.alert-primary{
+  background:#e7f1ff;
+  border-color:#b6d4fe;
+  color:#084298;
+}
+
+
+/* Podstawowy styl tabeli. */
+.table{
+  width:100%; /* szerokość tabeli */
+  border-collapse:collapse; /* połączenie obramowań komórek */
+  margin-bottom:1rem; /* odstęp pod tabelą */
+}
+
+
+/* Styl komórek tabeli. */
+.table th,
+.table td{
+  border:1px solid var(--bs-border); /* obramowanie komórek */
+  padding:.65rem; /* wewnętrzny odstęp */
+  text-align:left; /* wyrównanie tekstu do lewej */
+  vertical-align:top; /* wyrównanie zawartości do góry */
+}
+
+
+/* Styl nagłówka tabeli. */
+.table thead th{
+  background:#0d6efd;
+  color:#fff;
+}
+
+
+/* Naprzemienne kolorowanie wierszy tabeli. */
+.table-striped tbody tr:nth-child(even){
+  background:#f3fbf1;
+}
+
+
+/* Styl etykiety pola formularza. */
+.form-label{
+  display:block;
+  margin-bottom:.35rem;
+  font-weight:600;
+}
+
+
+/* Styl pól formularza oraz list rozwijanych. */
+.form-control,
+.form-select{
+  display:block;
+  width:100%;
+  padding:.55rem .65rem;
+  border:1px solid #b8c6cc;
+  border-radius:.4rem;
+  background:#fff;
+  color:#23343b;
+}
+
+
+/* Styl aktywnego pola formularza. */
+.form-control:focus,
+.form-select:focus{
+  outline:3px solid rgba(13,110,253,.18);
+  border-color:#0d6efd;
+}
+
+
+/* Styl pola typu checkbox lub radio. */
+.form-check{
+  display:flex;
+  gap:.5rem;
+  align-items:center;
+  margin-bottom:.35rem;
+}
+
+
+/* Dodatkowy tekst pomocniczy formularza. */
+.form-text{
+  font-size:.86rem;
+  color:#60727b;
+}
+/* Kontener grupujący pole formularza i przycisk w jednym wierszu. */
+.input-group{
+  display:flex;
+}
+
+
+/* Zaokrąglenie tylko lewej części pola formularza. */
+.input-group .form-control{
+  border-radius:.4rem 0 0 .4rem;
+}
+
+
+/* Zaokrąglenie tylko prawej części przycisku. */
+.input-group .btn{
+  border-radius:0 .4rem .4rem 0;
+}
+
+
+/* Główny kontener karuzeli. */
+.carousel{
+  position:relative; /* punkt odniesienia dla przycisków sterujących */
+  overflow:hidden; /* ukrycie elementów wychodzących poza obszar karuzeli */
+  border-radius:.5rem; /* zaokrąglenie rogów */
+}
+
+
+/* Kontener przechowujący wszystkie slajdy karuzeli. */
+.carousel-inner{
+  display:flex;
+  transition:transform .35s ease; /* płynna animacja zmiany slajdu */
+}
+
+
+/* Pojedynczy slajd karuzeli. */
+.carousel-item{
+  min-width:100%; /* każdy slajd zajmuje całą szerokość karuzeli */
+  display:none; /* domyślnie ukryty */
+}
+
+
+/* Aktualnie wyświetlany slajd. */
+.carousel-item.active{
+  display:block;
+}
+
+
+/* Wspólne ustawienia przycisków nawigacyjnych karuzeli. */
+.carousel-control-prev,
+.carousel-control-next{
+  position:absolute; /* pozycjonowanie względem karuzeli */
+  top:50%; /* ustawienie na środku wysokości */
+  transform:translateY(-50%); /* dokładne wyśrodkowanie pionowe */
+  border:0; /* usunięcie obramowania */
+  border-radius:50%; /* okrągły kształt */
+  width:36px; /* szerokość przycisku */
+  height:36px; /* wysokość przycisku */
+  background:rgba(20,54,66,.75); /* półprzezroczyste tło */
+  color:#fff; /* kolor symbolu */
+  cursor:pointer; /* zmiana kursora */
+}
+
+
+/* Przycisk przejścia do poprzedniego slajdu. */
+.carousel-control-prev{
+  left:10px;
+}
+
+
+/* Przycisk przejścia do następnego slajdu. */
+.carousel-control-next{
+  right:10px;
+}
+
+
+/* Główne okno modalne. */
+.modal{
+  display:none; /* domyślnie ukryte */
+  position:fixed; /* pozostaje w miejscu podczas przewijania strony */
+  inset:0; /* zajmuje całą powierzchnię okna */
+  background:rgba(0,0,0,.45); /* przyciemnione tło */
+  z-index:1050; /* wyświetlanie nad pozostałymi elementami */
+  align-items:center; /* wyśrodkowanie pionowe */
+  justify-content:center; /* wyśrodkowanie poziome */
+  padding:1rem; /* odstęp od krawędzi ekranu */
+}
+
+
+/* Widoczny stan okna modalnego. */
+.modal.show{
+  display:flex;
+}
+
+
+/* Kontener zawartości modala. */
+.modal-dialog{
+  max-width:560px; /* maksymalna szerokość */
+  width:100%; /* dostosowanie do dostępnego miejsca */
+}
+
+
+/* Główna zawartość modala. */
+.modal-content{
+  background:#fff;
+  border-radius:.5rem;
+  border:1px solid var(--bs-border);
+  overflow:hidden;
+}
+
+
+/* Nagłówek i stopka modala. */
+.modal-header,
+.modal-footer{
+  padding:1rem;
+  border-bottom:1px solid var(--bs-border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+
+/* Dodatkowe ustawienia stopki modala. */
+.modal-footer{
+  border-bottom:0;
+  border-top:1px solid var(--bs-border);
+}
+
+
+/* Środkowa część modala. */
+.modal-body{
+  padding:1rem;
+}
+
+
+/* Przycisk zamknięcia modala. */
+.btn-close{
+  border:0;
+  background:transparent;
+  font-size:1.3rem;
+  line-height:1;
+  cursor:pointer;
+}
+
+
+/* Media Query dla ekranów od 768 px wzwyż.
+   Definicje szerokości kolumn w siatce Bootstrap. */
+@media (min-width:768px){
+
+  .col-md-3{
+    width:25%;
+  }
+
+  .col-md-4{
+    width:33.3333%;
+  }
+
+  .col-md-5{
+    width:41.6667%;
+  }
+
+  .col-md-6{
+    width:50%;
+  }
+
+  .col-md-7{
+    width:58.3333%;
+  }
+
+  .col-md-8{
+    width:66.6667%;
+  }
+
+  .col-md-9{
+    width:75%;
+  }
+
+}
+
+
+/* Media Query dla ekranów od 992 px wzwyż.
+   Dodatkowe szerokości kolumn dla większych urządzeń. */
+@media (min-width:992px){
+
+  .col-lg-3{
+    width:25%;
+  }
+
+  .col-lg-4{
+    width:33.3333%;
+  }
+
+  .col-lg-6{
+    width:50%;
+  }
+
+  .col-lg-8{
+    width:66.6667%;
+  }
+
+}
+
+
+/* Media Query dla ekranów mniejszych niż 992 px.
+   Zmiany dotyczą głównie menu mobilnego. */
+@media (max-width:991.98px){
+
+  /* Wyświetlenie przycisku rozwijającego menu. */
+  .navbar-toggler{
+    display:block;
+  }
+
+  /* Wyrównanie elementów menu do górnej krawędzi. */
+  .navbar .container{
+    align-items:flex-start;
+  }
+
+  /* Ukrycie rozwijanej części menu. */
+  .collapse{
+    display:none;
+    width:100%;
+  }
+
+  /* Pokazanie menu po dodaniu klasy show. */
+  .collapse.show{
+    display:block;
+  }
+
+  /* Wyświetlanie elementów menu jeden pod drugim. */
+  .navbar-nav{
+    display:block;
+    padding-top:.5rem;
+  }
+
+  /* Zmiana odstępów linków menu. */
+  .nav-link{
+    padding:.65rem .4rem;
+  }
+
+  /* Możliwość zawijania elementów w kontenerze menu. */
+  .navbar .container{
+    flex-wrap:wrap;
+  }
+
+}

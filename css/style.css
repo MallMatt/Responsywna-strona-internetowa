@@ -1,0 +1,198 @@
+/* zLab2: własny arkusz CSS odpowiada za wygląd strony. */
+
+/* Definicja zmiennych kolorystycznych wykorzystywanych w projekcie. */
+:root {
+  --aqua-blue: #0d6efd;      /* kolor niebieski */
+  --plant-green: #198754;    /* kolor zielony */
+  --sand-yellow: #ffc107;    /* kolor żółty */
+  --deep: #143642;           /* kolor ciemny */
+  --soft: #eef8fb;           /* kolor jasny */
+}
+
+/* Ustawienie koloru tła dla całej strony. */
+body {
+  background: #f7fbfd;
+}
+
+/* Styl nagłówka strony. */
+.site-top {
+  background: linear-gradient(90deg, var(--aqua-blue), var(--plant-green));
+  border-bottom: 5px solid var(--sand-yellow); /* dolna ramka nagłówka */
+}
+
+/* Styl sekcji powitalnej. */
+.hero {
+  background: #e7f6fb;
+  border-bottom: 1px solid #cae4ed;
+}
+
+/* Styl karty zawierającej tekst powitalny. */
+.hero-card {
+  background: #fff;
+  border-left: 8px solid var(--sand-yellow);
+  box-shadow: 0 8px 18px rgba(20, 54, 66, .12);
+}
+
+/* Styl pola informacyjnego. */
+.student-note {
+  background: #fff8d7;
+  border: 1px solid #ffe28a;
+  border-radius: .5rem;
+}
+
+/* Styl nagłówków sekcji. */
+.section-title {
+  border-left: 6px solid var(--plant-green);
+  padding-left: .75rem;
+}
+
+/* Styl małych ikon. */
+.icon-sm {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  margin-right: .3rem;
+}
+
+/* Styl zdjęć wyświetlanych na stronie. */
+.fish-photo {
+  background: #dff4f8;
+  min-height: 150px;
+  object-fit: cover;
+}
+
+/* zLab3: wykorzystanie pozycjonowania float. */
+
+/* Styl ramki z poradami. */
+.tip-box {
+  float: right;
+  width: 260px;
+  margin: 0 0 1rem 1rem;
+  background: #fff;
+  border: 2px solid var(--plant-green);
+  border-radius: .5rem;
+  padding: .85rem;
+}
+
+/* Wyłączenie opływania elementów. */
+.clear-after {
+  clear: both;
+}
+
+/* Kontener wykorzystujący układ Flexbox. */
+.simple-flex {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Styl elementów znajdujących się w kontenerze Flexbox. */
+.simple-flex > div {
+  flex: 1 1 220px;
+}
+
+/* Styl dekoracyjnego paska. */
+.aquarium-strip {
+  min-height: 68px;
+  background: linear-gradient(
+    90deg,
+    #0d6efd 0 34%,
+    #198754 34% 68%,
+    #ffc107 68% 100%
+  );
+  border-radius: .5rem;
+}
+
+/* Styl kart prezentujących oferty. */
+.offer-card {
+  border-top: 5px solid var(--aqua-blue);
+}
+
+/* Zielona wersja karty. */
+.offer-green {
+  border-top-color: var(--plant-green);
+}
+
+/* Żółta wersja karty. */
+.offer-yellow {
+  border-top-color: var(--sand-yellow);
+}
+
+/* Styl wyświetlania ceny. */
+.mini-price {
+  font-weight: 700;
+  color: var(--plant-green);
+  margin-bottom: 0;
+}
+
+/* Styl listy przechowującej dane. */
+.storage-list {
+  padding-left: 1.1rem;
+}
+
+/* Styl panelu wyświetlającego zawartość SPA. */
+.spa-panel {
+  min-height: 210px;
+  border: 1px solid #cbdde4;
+  background: #fff;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+/* Styl pola wyświetlającego wyniki. */
+.result-box {
+  background: #eef8fb;
+  border: 1px dashed #7fb8c7;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+/* Styl stopki strony. */
+.footer {
+  background: var(--deep);
+  color: #e9fbff;
+  text-align: center;
+}
+
+/* Styl odnośników znajdujących się w stopce. */
+.footer a {
+  color: #ffda54;
+   text-align: center;
+}
+
+/* zLab5: dostosowanie układu do mniejszych ekranów. */
+@media (max-width: 760px) {
+
+  /* Zmiana układu ramki z poradami. */
+  .tip-box {
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+
+  /* Zmiana obramowania karty powitalnej. */
+  .hero-card {
+    border-left-width: 0;
+    border-top: 8px solid var(--sand-yellow);
+  }
+
+  /* Zmniejszenie rozmiaru tekstu w tabelach. */
+  .table {
+    font-size: .92rem;
+  }
+}
+
+/* Dodatkowe zmiany dla bardzo małych ekranów. */
+@media (max-width: 520px) {
+
+  /* Zmniejszenie rozmiaru nagłówka h1. */
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  /* Rozciągnięcie przycisków na całą szerokość kontenera. */
+  .btn {
+    width: 100%;
+    margin-bottom: .35rem;
+  }
+}
